@@ -1,0 +1,79 @@
+/* Подключение шрифтов */
+@import "fonts.css";
+/* Подключение основных стилей */
+@import "base.css";
+/* Подключение стилей относящихся к header */
+@import "header.css";
+/* Подключение стилей относящихся к footer */
+@import "footer.css";
+/* Подключение стилей относящихся к main */
+@import "main.css";
+@import "book.css";
+/* Общие стили для тела страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Темный текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
+    margin: 0;
+}
+
+/* Контейнер для формы */
+.container {
+    background-color: #ffffff; /* Белый фон для формы */
+    padding: 20px;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень */
+    width: 300px; /* Ширина формы */
+    text-align: center; /* Центрируем текст */
+    transition: transform 0.3s; /* Плавная анимация при наведении */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Увеличиваем форму при наведении */
+}
+
+/* Заголовок формы */
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Группы форм */
+.form-group {
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Метки форм */
+.form-label {
+    display: block; /* Блочный элемент */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+/* Поля ввода */
+.form-input {
+    width: 100%; /* Полная ширина */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Серый бордер */
+    border-radius: 4px; /* Закругленные углы */
+    transition: border-color 0.3s; /* Плавная анимация изменения цвета бордера */
+}
+
+.form-input:focus {
+    border-color: #bb6c23; /* Цвет бордера при фокусе */
+    outline: none; /* Убираем обводку */
+}
+
+/* Кнопка отправки */
+.form-submit {
+    background-color: #bb6c23; /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста */
+    border: none; /* Убираем бордер */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s, transform 0.3s; /* Плавная анимация */
+}

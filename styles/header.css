@@ -1,18 +1,91 @@
 /* Стили для центральной части сайта */
-.header{
-    background-color: #f8d7b8;
+.header {
+    background-color: #bb6c23; 
     color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
 }
-.header__site-title{
+
+.header a {
+    text-decoration: none; /* Убираем подчеркивание для всех ссылок внутри .header */
+}
+
+.header__site-title {
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.2;
-    color: #0c0c0c;
+    line-height: 1.2; 
+    color: #0c0c0c; 
+    margin: 0;
 }
-.header__nav-link{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #0d0d0e;
-    text-decoration: none;
+
+/* Навигация в шапке*/
+.header__nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__nav-link {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #ad6b0a; 
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+}
+
+.header__nav-link:hover {
+    background-color: #9b5e08;
+    transform: scale(1.05); 
+}
+
+.header__nav-link:active {
+    transform: scale(0.95); 
+}
+
+.header__nav-link:hover,
+.header__nav-link:active {
+    color: #ffffff; 
+}
+
+/* Адаптивные стили для разрешения 768px и выше */
+@media (min-width: 768px) {
+    .header {
+        padding: 20px; 
+    }
+
+    .header__site-title {
+        font-size: 28px; /* Увеличиваем размер заголовка */
+    }
+
+    .header__nav-link {
+        padding: 15px; /* Увеличиваем внутренние отступы для навигации */
+        margin: 10px; /* Увеличиваем отступы между элементами навигации */
+    }
+}
+
+/* Адаптивные стили для разрешения 1024px и выше */
+@media (min-width: 1024px) {
+    .header {
+        justify-content: center; /* Центрируем содержимое заголовка */
+    }
+    
+    .header__nav {
+        justify-content: flex-end; /* Выравниваем навигацию вправо */
+    }
+
+    .header__site-title {
+        font-size: 32px; /* Еще больше увеличиваем размер заголовка */
+    }
+
+    .header__nav-link {
+        margin: 15px; /* Увеличиваем отступы между элементами навигации */
+    }
 }
