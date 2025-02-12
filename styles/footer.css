@@ -1,5 +1,101 @@
-/* Стили для шапки сайта */
-.footer{
-    background-color: #f8d7b8;
-    color: #000000;
+/* Стили для подвала сайта */
+.footer {
+    background-color: #d49f69; /* фон */
+    color: #57524e; /* Светлый текст */
+    padding: 20px; /* Отступы */
+    text-align: left; /* Выравнивание текста */
+}
+
+.footer .contact {
+    margin-bottom: 20px; /* Отступ снизу для секции контактов */
+}
+
+.contact__section {
+    display: flex; /* Используем flexbox для выравнивания */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+.contact__link {
+    color: #57524e; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    margin-bottom: 10px; /* Отступ снизу */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.contact__link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #3b2a1c; /* Цвет ссылки при наведении */
+}
+
+.contact__image {
+    border-radius: 50%;
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.contact__image:hover {
+    transform: scale(1.1); /* Увеличение картинки при наведении */
+}
+
+/* Стили для списка ссылок в футере */
+.footer__links {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: left; 
+    flex-wrap: wrap; /* Позволяем ссылкам переноситься на следующую строку */
+}
+
+.footer__item {
+    margin: 0 15px; /* Отступы между элементами */
+}
+
+.footer__link {
+    color: #57524e; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.footer__link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #3b2a1c; /* Цвет ссылки при наведении */
+}
+
+.footer__text {
+    font-size: 14px; /* Размер шрифта для текста */
+    margin-top: 20px; /* Отступ сверху */
+    color: #57524e; /* Цвет текста */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.footer__text:hover {
+    color: #3b2a1c; /* Цвет текста при наведении */
+}
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+        }
+    .footer {
+        display: flex; /* Используем Flexbox для выравнивания */
+        flex-direction: row; /* Устанавливаем направление на строку */
+        justify-content: space-around; /* Распределяем элементы по ширине */
+        align-items: flex-start; /* Выравнивание по верхнему краю */
+    }
+
+    .footer__links {
+        flex: 1; /* Занимаем равное пространство */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        padding: 40px; /* Увеличиваем отступы для больших экранов */
+    }
+
+    .footer__item {
+        margin: 15px 0; /* Увеличиваем отступы между элементами */
+    }
 }

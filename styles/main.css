@@ -1,43 +1,55 @@
 
 /* Стили для поля ввода */
+.main-content {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro__form {
+    margin-bottom: 20px;
+}
+
 .intro__input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.2;
     color: #5b3a29; 
-    padding: 5px;
-    border: 1px solid #d3b8a1;
-    border-radius: 4px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .intro__input:hover,
 .intro__input:focus {
-    border-color: #9b5e08;
-    box-shadow: 0 0 5px rgba(155, 94, 8, 0.5);
-    outline: none;
+    border-color: #9b5e08; /* Цвет границы при наведении и фокусе */
+    box-shadow: 0 0 5px rgba(155, 94, 8, 0.5); /* Тень при наведении и фокусе */
+    outline: none; /* Убирает стандартный контур */
 }
 
-/* Стили для кнопки Найти */
 .intro__submit {
+    padding: 10px 20px;
+    background-color: #dd9356;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.2;
-    color: #ffffff; 
-    background-color: #d3b8a1; 
-    border: none;
-    padding: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
 }
 
 .intro__submit:hover {
-    background-color: #9b5e08;
-    transform: scale(1.05);
+    background-color: #9b5e08; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
 }
 
-/* Заголовок */
 .intro__title {
     font-size: 36px;
     font-weight: 500;
@@ -46,7 +58,10 @@
     text-align: left;
 }
 
-/* Карточка для списка книг */
+.book {
+    margin-bottom: 40px;
+}
+
 .book__list {
     margin: 0;
     padding: 20px 0;
@@ -57,7 +72,6 @@
     justify-content: center; 
 }
 
-/* Элемент книги */
 .book__item {
     width: 350px; 
     padding: 20px 40px 40px; 
@@ -66,42 +80,50 @@
     box-shadow: 1px 2px 15px 4px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход */
 }
 
 .book__item:hover {
-    transform: translateY(-5px);
-    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Подъем карточки при наведении */
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+.book__title1 {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    font-size: 24px; 
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s; /* Плавный переход цвета */
 }
 
-/* Заголовок книги */
+.book__title1:hover {
+    color: #3b2a1c; /* Цвет заголовка при наведении */
+}
 .book__title {
     margin-top: 10px; 
     margin-bottom: 10px; 
-    font-size: 12px; 
+    font-size: 16px; 
     font-weight: bold;
-    text-align: center;
-    transition: color 0.3s;
+    text-align: left;
+    transition: color 0.3s; /* Плавный переход цвета */
 }
 
 .book__title:hover {
-    color: #3b2a1c;
+    color: #3b2a1c; /* Цвет заголовка при наведении */
 }
 
-/* Автор книги */
 .book__author {
     margin-top: 0;
     margin-bottom: 10px; 
     font-size: 14px; 
     font-style: italic;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Плавный переход цвета */
 }
 
 .book__author:hover {
-    color: #3b2a1c;
+    color: #3b2a1c; /* Цвет автора при наведении */
 }
 
-/* Информация о книге */
 .book__info {
     display: block;
     padding: 8px; 
@@ -109,38 +131,29 @@
     color: #ffffff; 
     text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
 }
 
 .book__info:hover {
-    background-color: #a86b3c;
+    background-color: #a86b3c; /* Цвет фона при наведении на информацию о книге */
 }
 
 .book__info {
     margin-top: auto;
 }
 
-/* Изображение книги */
 .book__image {
     width: 100%;
     height: 400px; 
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform
 }
-
-.book__image:hover {
-    transform: scale(1.05);
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+        }
+    .intro__input {
+        width: 400px
+    }
 }
-@media screen and (min-width:100px) and (max-width:768px) {
-    #wrapper #colLeft {
-      float:none;
-      width:100%;
-      margin-right:0px;
-    }
-    #wrapper #colRight {
-      margin-left:0px;
-      margin-top:25px;
-      float:none;
-      width:100%;
-    }
-  }
